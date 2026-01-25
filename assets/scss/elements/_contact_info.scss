@@ -1,0 +1,56 @@
+/*========================================*/
+/*----------- [_Contact_Info] ------------*/
+/*========================================*/
+.contact_info_01 {
+  display: flex;
+  align-items: flex-start;
+  .contact_info_icon {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    margin-top: 5px;
+    i {
+      &:before {
+        color: #fff;
+        font-size: 22px;
+      }
+    }
+  }
+  .contact_info_details {
+    margin-left: 15px;
+    .text {
+      line-height: 1.7;
+    }
+  }
+}
+//contact_info_02
+.contact_info_02 {
+  background: var(--bg-silver);
+  padding: 30px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  .contact-icon {
+    i {
+      width: 64px;
+      height: 64px;
+      background: var(--webex-primary-color);
+      text-align: center;
+      line-height: 64px;
+      display: inline-block;
+      border-radius: 6px;
+      &:before {
+        color: var(--text-webex-primary-color);
+        font-size: 36px;
+      }
+    }
+  }
+  .contact-details {
+    margin-left: 30px;
+  }
+}

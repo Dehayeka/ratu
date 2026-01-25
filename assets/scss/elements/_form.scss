@@ -1,0 +1,436 @@
+/*========================================*/
+/*-------------- [_Form] -----------------*/
+/*========================================*/
+.form-control {
+  box-shadow: none;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-silver);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--heading-font);
+  color: #fff;
+  height: auto;
+  padding: 25px 20px;
+  resize: none;
+  min-width: 100%;
+  height: 56px;
+  border-radius: 6px;
+  &::placeholder {
+    color: #ccc;
+  }
+  &:-ms-input-placeholder {
+    color: #ccc;
+  }
+  &::-ms-input-placeholder {
+    color: #ccc;
+  }
+}
+textarea.form-control {
+  min-height: 215px;
+}
+.form-control:focus {
+  border-color: var(--webex-primary-color);
+}
+form.white-field .form-control {
+  background: var(--bg-white);
+}
+.contact-form textarea {
+  display: inline-block;
+  min-height: 190px;
+}
+.contact-form textarea,
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="password"] {
+  background: var(--bg-silver);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+.contact-form .form-control:focus {
+  border-color: var(--webex-primary-color);
+  background: var(--bg-silver);
+}
+select {
+  width: 268px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 5px;
+  height: 34px;
+  background: url(../../images/down-arrow.png) no-repeat right #ddd;
+  background-position-x: 96%;
+}
+//For Ziptech Theme
+.request-a-call-back-form-section-style1 {
+  .request-a-call-back-area {
+    background: var(--bg-white);
+    background-image: url(../../images/objects/1.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    margin-top: -185px;
+    z-index: 1;
+    position: relative;
+    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    .request-a-call-back-form {
+      padding: 60px 100px 80px 90px;
+      @media screen and (max-width: 1024px) {
+        padding: 45px 45px 20px 45px;
+      }
+      textarea.form-control {
+        min-height: 140px;
+      }
+      .nice-select {
+        border-radius: 0;
+        width: 100%;
+        height: 56px;
+        line-height: 56px;
+        font-size: 16px;
+        background: var(--bg-silver);
+        color: #73767e;
+        margin-bottom: 25px;
+        .option {
+          font-weight: 500;
+        }
+      }
+    }
+    .request-a-call-back-form-image {
+      text-align: left;
+      img {
+        border-radius: 10px 0 0 10px;
+      }
+    }
+  }
+}
+//Request a Call Back Form Style2//
+.request-a-call-back-form-style2 {
+  padding: 54px 70px 68px 70px;
+  @include box-shadow(0 0 20px 0px rgba(38, 37, 37, 0.1));
+  background-color: var(--bg-white);
+  position: relative;
+  background-image: url(../../images/bg/abs-bg1.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  z-index: 1;
+  border-radius: 8px;
+  @media screen and (max-width: 768px) {
+    padding: 45px;
+  }
+  textarea {
+    &.form-control {
+      min-height: 95px;
+    }
+  }
+  .form-control {
+    height: 56px;
+    padding: 10px 20px;
+  }
+  .custom-select-categories {
+    background-color: var(--bg-white);
+    height: 56px;
+    width: 100%;
+    line-height: 54px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    border-radius: 0;
+  }
+  .nice-select {
+    border-radius: 0;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    font-size: 16px;
+    background: var(--bg-silver);
+    color: #73767e;
+    margin-bottom: 25px;
+    .option {
+      font-weight: 500;
+    }
+  }
+}
+//For Ziptech Theme
+.request-a-call-back-form-section-style3 {
+  .request-a-call-back-form-style3 {
+    background: var(--bg-white);
+    background-image: url(../../images/bg/abs-bg2.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: cover;
+    margin-top: -200px;
+    z-index: 1;
+    position: relative;
+    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    padding: 80px 80px 65px 80px;
+    @media screen and (max-width: 1024px) {
+      padding: 80px;
+    }
+    @media screen and (max-width: 425px) {
+      padding: 40px;
+      background-image: none;
+    }
+    .contact-info {
+      position: relative;
+      &:hover {
+        .contact-info-icon {
+          i {
+            background: var(--webex-primary-color);
+            color: var(--text-white);
+          }
+        }
+      }
+      .contact-info-icon {
+        i {
+          background: var(--bg-silver);
+          width: 80px;
+          height: 80px;
+          display: inline-block;
+          line-height: 82px;
+          text-align: center;
+          border-radius: 50%;
+          color: var(--webex-primary-color);
+          font-size: 35px;
+          margin-bottom: 25px;
+          transition: 0.4s;
+        }
+      }
+      .contact-info-content {
+        .title {
+          color: var(--heading-font-color);
+          transition: 0.4s;
+          display: block;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .request-a-call-back-form {
+      textarea.form-control {
+        min-height: 140px;
+      }
+      .nice-select {
+        border-radius: 0;
+        width: 100%;
+        height: 56px;
+        line-height: 56px;
+        font-size: 16px;
+        background: var(--bg-silver);
+        color: #73767e;
+        margin-bottom: 25px;
+        .option {
+          font-weight: 500;
+        }
+      }
+    }
+    .request-a-call-back-form-image {
+      text-align: left;
+      img {
+        border-radius: 10px 0 0 10px;
+      }
+    }
+  }
+}
+.rcbf-img {
+  img {
+    width: 328px;
+    float: left;
+    border-radius: 8px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+//Request a Call Back Form Sidebar//
+.request-a-call-back-form.sidebar {
+  background: var(--webex-secondary-color);
+  padding: 30px;
+}
+
+//Request a Call Back Form Vertical Two//
+.request-a-call-back-form-vertical-two {
+  background-color: var(--text-white);
+  padding: 60px;
+  @media screen and (max-width: 425px) {
+    padding: 30px;
+  }
+  border-radius: 8px;
+  background-image: url(../../images/bg/abs-bg2.png);
+  box-shadow: var(--box-shadow);
+  .form-control {
+    height: 54px;
+    line-height: 1.3;
+    border-radius: 0;
+    font-size: 16px;
+    color: #243b60;
+    &:focus {
+      border-color: var(--webex-primary-color);
+    }
+  }
+  .custom-select-categories {
+    background-color: var(--text-white);
+    color: #243b60;
+    height: 54px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px 15px;
+    border: 1px solid #dfdce6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: none;
+    line-height: 1.3;
+  }
+}
+
+.request-a-call-back-form.form-control {
+  margin-bottom: 20px;
+}
+.newsletter-from {
+  position: relative;
+  .email {
+    input[type="email"] {
+      width: 100%;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--footer-text-color);
+      padding: 15px 30px;
+      font-family: var(--heading-font);
+      letter-spacing: 0.5px;
+      font-size: 16px;
+      border-radius: 40px;
+      margin-bottom: 15px;
+      &::placeholder {
+        color: var(--footer-text-color);
+      }
+      &:-ms-input-placeholder {
+        color: var(--footer-text-color);
+      }
+      &::-ms-input-placeholder {
+        color: var(--footer-text-color);
+      }
+    }
+  }
+  .submit {
+    button {
+      color: #000;
+      background-color: #fff;
+      border-color: transparent;
+      margin-top: 5px;
+      width: 100%;
+      padding: 15px;
+      border-radius: 40px;
+    }
+  }
+}
+
+// Google Map
+.google-map {
+  height: 440px;
+}
+.google-map.map-full-height {
+  height: 100%;
+}
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 100%;
+  width: 100%;
+}
+.mapouter.fixed-height {
+  height: 440px;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 100%;
+  width: auto;
+}
+.mapouter iframe {
+  width: 100%;
+  height: 100%;
+}
+.nice-select:active,
+.nice-select.open,
+.nice-select:focus {
+  border-color: var(--webex-primary-color);
+}
+.nice-select .option.selected {
+  font-weight: 500;
+}
+.nice-select .list {
+  width: 100%;
+}
+.nice-select.open .list {
+  border-radius: 0;
+}
+.nice-select:after {
+  height: 8px;
+  width: 8px;
+  right: 20px;
+}
+
+.get-a-quote-section {
+  position: relative;
+  &:after {
+    background: url(../../images/bg/7.jpg);
+    content: "";
+    height: 110%;
+    width: 865px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 15%);
+    @media screen and (max-width: 1024px) {
+      width: 290px;
+      opacity: 0.1;
+      height: 100%;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+//contact_form_transparent
+.contact_form_transparent {
+  textarea {
+    &.form-control {
+      min-height: 150px;
+      color: #fff;
+    }
+  }
+  textarea,
+  input[type="text"],
+  input[type="email"],
+  input[type="subject"],
+  input[type="password"] {
+    background: transparent;
+    border: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 0;
+    color: #fff;
+    &:focus {
+      background: transparent;
+      border: transparent;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    &::placeholder {
+      color: #fff !important;
+    }
+    &:-ms-input-placeholder {
+      color: #fff !important;
+    }
+    &::-ms-input-placeholder {
+      color: #fff !important;
+    }
+  }
+}

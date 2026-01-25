@@ -1,0 +1,92 @@
+/*========================================*/
+/*------------- [_Video_Popup] -----------*/
+/*========================================*/
+.image-video-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 10px 0 0 10px;
+  img {
+    border-radius: 10px 0 0 10px;
+    width: 100%;
+  }
+  .video-link {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    text-align: center;
+    a {
+      display: inline-block;
+      z-index: 6;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: -1;
+        animation: pulse-border-2 1s ease-out infinite;
+      }
+      i {
+        display: block;
+        position: relative;
+        height: 72px;
+        width: 72px;
+        line-height: 72px;
+        background: var(--webex-primary-color);
+        z-index: 2;
+        &::before {
+          font-size: 16px;
+          color: #fff;
+          z-index: 6;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+.video-block {
+  display: inline-block;
+  .video-link {
+    text-align: center;
+    a {
+      display: inline-block;
+      i {
+        display: inline-block;
+        position: relative;
+        height: 75px;
+        width: 75px;
+        line-height: 75px;
+        background: #b98e75;
+        border-radius: 50%;
+        z-index: 3;
+        border: 1px solid #ffffff1a;
+        &::before {
+          font-size: 18px;
+          color: #fff;
+          border-radius: 50%;
+          z-index: 3;
+          position: relative;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: #ad836ab8;
+          border-radius: 50%;
+          animation: pulse-border-2 1s ease-out infinite;
+          z-index: 0;
+          border: 1px solid #b98e75;
+        }
+      }
+    }
+  }
+}

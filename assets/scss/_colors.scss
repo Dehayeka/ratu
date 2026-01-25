@@ -1,0 +1,61 @@
+/*========================================*/
+/*-------------- [_Colors] ---------------*/
+/*========================================*/
+
+/*========== Background Colors ==========*/
+.bg-primary-color {
+  background: var(--webex-primary-color);
+}
+.bg-primary-color2 {
+  background: var(--webex-primary-color2);
+}
+.bg-primary-color3 {
+  background: var(--webex-primary-color3);
+}
+.bg-primary-color4 {
+  background: var(--webex-primary-color4);
+}
+.bg-secondary-color {
+  background: var(--webex-secondary-color);
+}
+.bg-secondary-color2 {
+  background: var(--webex-secondary-color2);
+}
+
+/*========== Text Color ==========*/
+.text-primary-color {
+  color: var(--webex-primary-color);
+}
+.text-primary-color2 {
+  color: var(--webex-primary-color2);
+}
+.text-primary-color3 {
+  color: var(--webex-primary-color3);
+}
+.text-primary-color4 {
+  color: var(--webex-primary-color4);
+}
+.text-webex-secondary-color {
+  color: var(--webex-secondary-color);
+}
+.text-webex-secondary-color2 {
+  color: var(--webex-secondary-color2);
+}
+.heading-text-color {
+  color: var(--heading-text-color);
+}
+.bg-gradient-color {
+  background: var(--bg-gradient-color);
+}
+.bg-gradient-reverse-color {
+  background: var(--bg-gradient-reverse-color);
+}
+
+.img-lum1 {
+  background-blend-mode: luminosity;
+  background: #e3d3ca;
+}
+
+.text-gradient-color {
+  @include text-gradient;
+}

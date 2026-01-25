@@ -1,0 +1,226 @@
+/*========================================*/
+/*------------ [_Section_News] -----------*/
+/*========================================*/
+//News Style1
+.news_wrapper_style1 {
+  .news-thumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    img {
+      @include transition(all 400ms ease-out 0s);
+      border-radius: 8px 8px 0 0;
+    }
+  }
+  .news-description {
+    padding: 30px 25px;
+    background: #18191b;
+    border-radius: 0 0 10px 10px;
+    .news-top-meta {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 30px;
+      font-weight: normal;
+      font-size: 16px;
+      list-style: none;
+      padding: 0;
+      color: #cccccc;
+      li {
+        position: relative;
+        &:after {
+          content: "";
+          background: #fff;
+          height: 4px;
+          width: 4px;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          right: -15px;
+          transform: translateY(-2px);
+        }
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+      }
+      .post-date {
+        color: #cccccc;
+        .entry-date {
+          a {
+            color: #cccccc;
+            i {
+              color: var(--webex-primary-color3);
+              margin-right: 5px;
+            }
+            &:hover,
+            &:focus {
+              color: var(--webex-primary-color3);
+            }
+          }
+        }
+      }
+      .post-comments {
+        .entry-comments {
+          color: #989292;
+          i {
+            color: var(--webex-primary-color);
+            margin-right: 5px;
+          }
+          &:hover {
+            color: var(--webex-primary-color);
+          }
+        }
+      }
+    }
+    .the-title {
+      a {
+        &:hover,
+        &:focus {
+          color: var(--webex-primary-color3);
+        }
+      }
+    }
+    .the-content {
+      margin-bottom: 25px;
+    }
+    .news_button {
+      margin-top: 15px;
+      color: #fff;
+      .btn_link {
+        position: relative;
+        display: inline-block;
+        padding-left: 30px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-family: var(--heading-font);
+        &:hover {
+          color: var(--webex-primary-color3);
+          &:before {
+            color: var(--webex-primary-color3);
+          }
+        }
+        &:before {
+          content: "\e877";
+          font-family: "webexbaseicon";
+          position: absolute;
+          left: 0;
+          font-size: 16px;
+          top: 1px;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.news_standard {
+    .news-description {
+      padding: 28px 0 0 0;
+      .the-title {
+        margin-bottom: 15px;
+        a {
+          &:hover,
+          &:focus {
+            color: var(--webex-primary-color);
+          }
+        }
+      }
+      .news_button {
+        margin-top: 25px;
+        .btn_link {
+          &:hover {
+            color: var(--webex-primary-color);
+            &:before {
+              color: var(--webex-primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.default__news-wrapper {
+  position: relative;
+  display: block;
+  margin-bottom: 60px;
+  .default__post-thumb {
+    position: relative;
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
+  .default__news-content-area {
+    position: relative;
+    display: block;
+    margin-top: 25px;
+    .default__news-post-meta {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      position: relative;
+      margin-left: -5px;
+      margin-right: -5px;
+      margin-bottom: 10px;
+      li {
+        position: relative;
+        display: block;
+        line-height: 26px;
+        padding-left: 5px;
+        padding-right: 10px;
+        a {
+          color: #a49e98;
+          @include transition(all 500ms ease);
+          i {
+            color: var(--webex-primary-color5);
+          }
+        }
+      }
+    }
+    .default__news-post-title {
+      margin-bottom: 20px;
+      font-size: 26px;
+      a {
+        @include transition(all 500ms ease);
+        word-break: break-word;
+        &:hover {
+          color: var(--webex-primary-color5);
+        }
+      }
+    }
+    .default__news-post-excerpt {
+      margin-bottom: 25px;
+    }
+    .default__news-readmore-btn {
+      a {
+        &.readmore-btn {
+          clear: both;
+          background-color: var(--webex-primary-color5);
+          border-color: var(--webex-primary-color5);
+          border: 1px solid;
+          border-radius: 5px;
+          padding: 12px 25px;
+          line-height: 1.5em;
+          color: #fff;
+          font-size: 1em;
+          text-transform: none;
+          font-weight: 600;
+          box-shadow: none;
+          display: inline-block;
+          @include transition(all 0.2s linear);
+          &:hover {
+            color: var(--webex-primary-color5);
+            border-color: var(--webex-primary-color5);
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+  & + .default__news-wrapper {
+    margin-top: 15px;
+  }
+}

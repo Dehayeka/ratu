@@ -1,0 +1,149 @@
+//======= Variables ========//
+
+$webex-primary-color: #deff00;
+$webex-primary-color2: #000000;
+$webex-primary-color3: #ff7b00;
+$webex-primary-color4: #4c40f7;
+$webex-primary-color5: #eb9e01;
+$webex-primary-color6: #da0212;
+$webex-primary-color7: #e42032;
+$webex-secondary-color: #0d1525;
+$webex-secondary-color2: #353666;
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+:root {
+  --webex-primary-color: #deff00;
+  --text-webex-primary-color: #000;
+  --webex-primary-color-rgb: #{hexToRGB($webex-primary-color)};
+  --webex-primary-color2: #000000;
+  --text-webex-primary-color2: #fff;
+  --webex-primary-color2-rgb: #{hexToRGB($webex-primary-color2)};
+  --webex-primary-color3: #ff7b00;
+  --text-webex-primary-color3: #fff;
+  --webex-primary-color3-rgb: #{hexToRGB($webex-primary-color3)};
+  --webex-primary-color4: #4c40f7;
+  --text-webex-primary-color4: #fff;
+  --webex-primary-color4-rgb: #{hexToRGB($webex-primary-color4)};
+  --webex-primary-color5: #eb9e01;
+  --webex-primary-color5-rgb: #{hexToRGB($webex-primary-color5)};
+  --webex-primary-color6: #da0212;
+  --webex-primary-color6-rgb: #{hexToRGB($webex-primary-color6)};
+  --webex-primary-color7: #e42032;
+  --webex-primary-color7-rgb: #{hexToRGB($webex-primary-color7)};
+  --webex-secondary-color: #0d1525;
+  --webex-secondary-color-rgb: #{hexToRGB($webex-secondary-color)};
+  --webex-secondary-color2: #353666;
+  --webex-secondary-color2-rgb: #{hexToRGB($webex-secondary-color)};
+
+  --theme-text-gray: #a5a5a5;
+  --link-color: #006cff;
+
+  --text-white: #ffffff;
+  --text-black: #303031;
+  --text-gray: #d7d9f2;
+  --text-blue: #447bde;
+  --text-light-gray: #a7a8b4;
+  --text-silver: #f1f3f8;
+  --text-silver-light: #f0efff;
+  --text-gray-light: #cccccc;
+  --text-dark-light: #808093;
+
+  --bg-white: #ffffff;
+  --bg-black: #000;
+  --bg-light-pink: #faf3f3;
+  --bg-silver: #f1f3f8;
+  --bg-silver-light: #e7e3f0;
+  --bg-silver-light2: #f0f1f7;
+  --bg-silver-deep: #ecdaee;
+  --bg-gray: #f7f7f7;
+
+  --gradient-color1: linear-gradient(45deg, var(--webex-primary-color) 0%, var(--webex-primary-color2) 100%);
+  --gradient-color2: linear-gradient(45deg, var(--webex-primary-color2) 0%, var(--webex-primary-color) 100%);
+  --gradient-color3: linear-gradient(45deg, var(--webex-primary-color5) 0%, var(--webex-primary-color6) 100%);
+  --gradient-color4: linear-gradient(45deg, var(--webex-primary-color6) 0%, var(--webex-primary-color5) 100%);
+  --gradient-section-overlay: linear-gradient(90deg, var(--webex-primary-color2) 10%, var(--webex-primary-color) 100%);
+
+  --heading-font: "Jost", sans-serif;
+  --body-font: "Kumbh Sans", sans-serif;
+  --secondary-font1: "Allison", cursive;
+
+  --heading-font-color: #000;
+  --h1-h2-font-weight: 700;
+  --h3-h4-font-weight: 600;
+  --h5-h6-font-weight: 600;
+
+  --body-font-color: #cccccc;
+  --body-font-size: 1rem;
+  --body-font-weight: 400;
+  --body-font-line-height: 1.8rem;
+
+  --header1-nav-color: #fff;
+  --header1-nav-hover-color: var(--webex-primary-color);
+  --header1-nav-font-family: var(--body-font);
+  --header1-nav-font-size: 14px;
+  --header1-nav-font-weight: 500;
+
+  --header1-nav-child-color: #fff;
+  --header1-nav-child-hover-color: #000;
+  --header1-nav-child-font-size: 14px;
+  --header1-nav--child-font-weight: 500;
+
+  --header2-nav-color: #fff;
+  --header2-nav-hover-color: var(--webex-primary-color3);
+  --header2-nav-font-family: var(--body-font);
+  --header2-nav-font-size: 14px;
+  --header2-nav-font-weight: 500;
+
+  --header2-nav-child-color: #fff;
+  --header2-nav-child-hover-color: #fff;
+  --header2-nav-child-font-size: 14px;
+  --header2-nav--child-font-weight: 500;
+
+  --header3-nav-color: #fff;
+  --header3-nav-hover-color: var(--webex-primary-color4);
+  --header3-nav-font-family: var(--body-font);
+  --header3-nav-font-size: 14px;
+  --header3-nav-font-weight: 500;
+
+  --header3-nav-child-color: #fff;
+  --header3-nav-child-hover-color: #fff;
+  --header3-nav-child-font-size: 14px;
+  --header3-nav--child-font-weight: 500;
+
+  --header4-nav-color: var(--heading-font-color);
+  --header4-nav-hover-color: var(--webex-primary-color);
+  --header4-nav-font-family: var(--heading-font);
+  --header4-nav-font-size: 16px;
+  --header4-nav-font-weight: 800;
+
+  --header4-nav-child-color: var(--heading-font-color);
+  --header4-nav-child-hover-color: #fff;
+  --header4-nav-child-font-size: 15px;
+  --header4-nav--child-font-weight: 700;
+
+  --sub-title-font-size: 16px;
+  --sub-title-font-weight: 400;
+  --sub-title-letter-spacing: 1px;
+
+  --box-shadow: 6px 6px 25px 0px rgba(0, 0, 0, 0.08);
+  --text-categories: #b5b5b5;
+  --footer-text-color: #ccc;
+
+  --widget-content-bg-color: #fbf6f3;
+  --widget-content-bg-text-color: var(--heading-font-color);
+}
+
+body.layout-dark-mood {
+  --heading-font-color: #fff;
+  --body-font-color: #dddddd;
+  --bg-white: #081217;
+  --widget-content-bg-color: #122228;
+  --bg-silver-light: #122228;
+  --bg-silver: #18191b;
+  --default-news-bg-color: #122228;
+  --text-white: #000;
+  --text-dark: #fff;
+  --theme-border-color: rgba(var(--webex-primary-color-rgb), 0.2);
+  --form-placeholder-color: #dddddd;
+}

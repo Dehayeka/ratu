@@ -1,0 +1,213 @@
+/*========================================*/
+/*-------------- [_Footer] ---------------*/
+/*========================================*/
+.footer,
+.footer a {
+  color: var(--footer-text-color);
+}
+.footer {
+  a {
+    &:hover {
+      color: var(--webex-primary-color3);
+    }
+  }
+}
+
+.footer-logo img {
+  width: 150px;
+}
+.footer-main-area {
+  padding: 110px 0 0;
+}
+.footer-copyright-area {
+  z-index: 1;
+  position: relative;
+}
+.footer-border-top-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-border-top {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-border-bottom {
+  border-bottom: 1px solid #303b58;
+}
+.h3-footer-border-bottom {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-widget {
+  margin-bottom: 40px;
+  display: inline-block;
+  .social-list {
+    li {
+      a {
+        background: #151d35;
+        &:hover {
+          background: var(--webex-primary-color3);
+          color: var(--heading-font-color);
+        }
+      }
+    }
+  }
+}
+.footer-widget-list {
+  li {
+    display: inherit;
+    margin-bottom: 10px;
+    a {
+      position: relative;
+      padding-left: 25px;
+      @include transition(all 300ms ease);
+      &:before {
+        position: absolute;
+        content: "\e918";
+        left: 0px;
+        top: -3px;
+        font-family: "webexbaseicon";
+        font-weight: 600;
+        color: var(--webex-primary-color3);
+      }
+      &:hover {
+        color: var(--webex-primary-color3);
+        padding-left: 30px;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.footer-contact-info {
+  display: flex;
+  align-items: center;
+  .contact-info-icon {
+    i {
+      &:before {
+        font-size: 28px;
+        background: var(--webex-primary-color);
+        color: #fff;
+        border-radius: 6px;
+        height: 54px;
+        width: 54px;
+        display: inline-block;
+        text-align: center;
+        line-height: 54px;
+      }
+    }
+  }
+  .contact-info-text {
+    margin-left: 20px;
+  }
+}
+
+//================================
+//=======Portivio Styles==========
+//================================
+
+//Footer For Home1
+.footer_big_text {
+  font-size: 100px;
+  line-height: 120px;
+  font-weight: 600;
+  @media screen and (max-width: 1200px) {
+    font-size: 78px;
+    line-height: 98px;
+  }
+  @media screen and (max-width: 991px) {
+    font-size: 72px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 42px;
+    line-height: 58px;
+  }
+}
+.h1_footer_01_social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  @media screen and (max-width: 768px) {
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  @media screen and (max-width: 991px) {
+    gap: 30px;
+  }
+  li {
+    a {
+      &:hover,
+      &:focus {
+        color: var(--webex-primary-color);
+      }
+    }
+  }
+}
+.h2_footer_02_social {
+  li {
+    display: inline;
+    margin-right: 5px;
+    z-index: 1;
+    position: relative;
+    a {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      height: 42px;
+      width: 42px;
+      display: inline-block;
+      color: #fff;
+      text-align: center;
+      border-radius: 50%;
+      line-height: 42px;
+      font-size: 16px;
+      &:hover {
+        background: var(--webex-primary-color4);
+        color: var(--text-webex-primary-color4);
+        border: 1px solid transparent;
+      }
+    }
+  }
+}
+.h3_footer_03_social {
+  li {
+    display: inline;
+    margin-right: 5px;
+    z-index: 1;
+    position: relative;
+    a {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      height: 42px;
+      width: 42px;
+      display: inline-block;
+      color: #fff;
+      text-align: center;
+      border-radius: 50%;
+      line-height: 42px;
+      font-size: 16px;
+      &:hover {
+        background: var(--webex-primary-color3);
+        color: var(--text-webex-primary-color3);
+        border: 1px solid transparent;
+      }
+    }
+  }
+}
+.h1_footer_oval_shape {
+  position: absolute;
+  width: 200px;
+  bottom: 25%;
+  right: 0;
+  animation: float-obj-y 3s linear infinite;
+}
+//Footer 02
+.h2_footer_arrow {
+  position: absolute;
+  top: -100px;
+  right: -120px;
+  animation: float-obj-x 3s linear infinite;
+}

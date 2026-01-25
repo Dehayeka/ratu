@@ -1,0 +1,119 @@
+/*========================================*/
+/*--------------- [_Skills] --------------*/
+/*========================================*/
+.skill_style1 {
+  .skill_item {
+    @media screen and (max-width: 1199px) {
+      height: 350px;
+      width: 350px;
+      margin-top: 0;
+    }
+    @media screen and (max-width: 768px) {
+      height: 300px;
+      width: 300px;
+    }
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0e0e0e;
+    border: 1px solid #ffffff33;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin-top: 100px;
+    &.md-size {
+      height: 330px;
+      width: 330px;
+      margin-left: -60px;
+      margin-top: -170px;
+      z-index: 1;
+      @media screen and (max-width: 1199px) {
+        height: 350px;
+        width: 350px;
+        margin-top: 0;
+        margin-left: 0;
+      }
+      @media screen and (max-width: 768px) {
+        height: 300px;
+        width: 300px;
+      }
+    }
+    &.lg-size {
+      height: 380px;
+      width: 380px;
+      margin-left: -60px;
+      @media screen and (max-width: 1199px) {
+        height: 350px;
+        width: 350px;
+        margin-left: 0;
+      }
+      @media screen and (max-width: 768px) {
+        height: 300px;
+        width: 300px;
+      }
+    }
+    &.xl-size {
+      height: 420px;
+      width: 420px;
+      margin-left: -115px;
+      @media screen and (max-width: 1199px) {
+        height: 350px;
+        width: 350px;
+        margin-left: 0;
+      }
+      @media screen and (max-width: 768px) {
+        height: 300px;
+        width: 300px;
+      }
+    }
+    .skill_icon {
+      margin-bottom: 20px;
+    }
+    .skill_count {
+      margin-bottom: 5px;
+    }
+  }
+}
+//Skill Style02
+.skill_style2 {
+  .skill_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0e0e0e;
+    border: 1px solid #ffffff33;
+    border-radius: 100px 0 100px 100px;
+    height: 265px;
+    @media screen and (max-width: 991px) {
+      border-radius: 100px;
+    }
+    &.style2 {
+      border-radius: 0 100px 100px 100px;
+      @media screen and (max-width: 991px) {
+        border-radius: 100px;
+      }
+    }
+    &.style3 {
+      border-radius: 100px 100px 0 100px;
+      @media screen and (max-width: 991px) {
+        border-radius: 100px;
+      }
+    }
+    &.style4 {
+      border-radius: 100px 100px 100px 0;
+      @media screen and (max-width: 991px) {
+        border-radius: 100px;
+      }
+    }
+    .skill_icon {
+      margin-bottom: 20px;
+    }
+    .skill_count {
+      margin-bottom: 5px;
+    }
+  }
+}

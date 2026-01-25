@@ -1,0 +1,69 @@
+/*=================================================*/
+/*---------- [_Section_Single_Project] ------------*/
+/*=================================================*/
+.project-details-page {
+  .project-thumb {
+    margin-bottom: 40px;
+  }
+  .project-info {
+    background: #fff;
+    margin-top: -112px;
+    border-radius: 10px 0 0 12px;
+    @media screen and (max-width: 991px) {
+      margin-top: 60px;
+    }
+    .project-info-title {
+      padding: 24px 30px;
+      background: var(--webex-primary-color);
+      border-radius: 10px 0 0 0;
+      .title {
+        color: var(--text-webex-primary-color);
+        margin-bottom: 0;
+      }
+    }
+    .project-info-body {
+      padding: 10px 15px 30px 30px;
+      background: var(--bg-black);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0 0 0 10px;
+      .project-info-list {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        .project-info-icon {
+          i {
+            height: 42px;
+            width: 42px;
+            color: var(--webex-primary-color);
+            font-size: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .info-details {
+          margin-left: 20px;
+          .name {
+            margin-bottom: 0;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      .social-list {
+        li {
+          a {
+            @include transition(all 300ms ease-out 0s);
+            &:hover,
+            &:focus {
+              background-color: #fff;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,989 @@
+/*========================================*/
+/*--------------- [_Buttons] -------------*/
+/*========================================*/
+//Current Theme buttons
+.theme-btn-1,
+.theme-btn-2,
+.theme-btn-3,
+.theme-btn-4,
+.theme-btn-5,
+.theme-btn-6,
+.theme-btn-7,
+.theme-btn-8 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--gradient-color2);
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  padding: 14px 42px;
+  font-family: var(--body-font);
+  font-weight: 500;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  z-index: 3;
+  i {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    height: 400px;
+    width: 430px;
+    top: 50%;
+    left: 50%;
+    background: var(--webex-secondary-color);
+    border-radius: 50%;
+    transform: translateX(-30%) translateY(-40%) scale(0);
+    @include transition(all 0.5s ease-out 0s);
+    z-index: -1;
+  }
+  &:hover {
+    color: var(--text-white);
+    &::before {
+      transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+  }
+  &:focus {
+    color: var(--text-white);
+  }
+}
+.theme-btn {
+  &-1 {
+    &::before {
+      background: var(--bg-white);
+    }
+    &:hover {
+      color: var(--webex-primary-color);
+      &::before {
+        background: var(--bg-white);
+      }
+    }
+  }
+  &-2 {
+    background: var(--bg-white);
+    color: var(--heading-font-color);
+    border: 1px solid #cccccc;
+    padding: 14px 42px;
+    &::before {
+      background: var(--webex-primary-color);
+    }
+    &:focus {
+      color: var(--heading-font-color);
+    }
+    &:hover {
+      border-color: var(--gradient-color2);
+      &:focus {
+        color: var(--bg-white);
+      }
+    }
+  }
+  &-3 {
+    background: transparent;
+    color: var(--webex-primary-color);
+    border: 1px solid var(--webex-primary-color);
+    padding: 14px 42px;
+    &:hover {
+      color: var(--text-white);
+      border-color: var(--webex-primary-color);
+    }
+    &::before {
+      background: var(--webex-primary-color);
+    }
+    &:focus {
+      color: var(--text-white);
+    }
+  }
+  &-4 {
+    background: var(--webex-secondary-color);
+    padding: 14px 42px;
+    &::before {
+      background: var(--bg-white);
+    }
+    &:hover {
+      color: var(--webex-secondary-color);
+    }
+  }
+  &-5 {
+    background: var(--webex-primary-color2);
+    color: var(--text-white);
+    border-radius: 30px;
+    padding: 14px 42px;
+    &::before {
+      background: var(--bg-white);
+    }
+    &:hover {
+      color: var(--webex-secondary-color);
+    }
+    &:focus {
+      color: var(--webex-secondary-color);
+    }
+  }
+  &-6 {
+    background: transparent;
+    border: 1px solid var(--webex-primary-color2);
+    color: var(--webex-primary-color2);
+    border-radius: 5px;
+    padding: 14px 42px;
+    &:hover {
+      border-color: var(--text-white);
+      &:focus {
+        color: var(--text-white);
+      }
+    }
+    &::before {
+      background: var(--gradient-color1);
+    }
+    &:focus {
+      color: var(--webex-primary-color2);
+    }
+  }
+  &-7 {
+    background: transparent;
+    color: var(--webex-primary-color2);
+    border: 1px solid var(--webex-primary-color2);
+    padding: 14px 42px;
+    &:hover {
+      border-color: var(--webex-secondary-color);
+    }
+    &::before {
+      background: var(--webex-secondary-color);
+    }
+    &:focus {
+      color: var(--webex-primary-color2);
+    }
+  }
+  &-8 {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 14px 42px;
+    &:hover {
+      border: 1px solid var(--webex-primary-color);
+    }
+    &::before {
+      background: var(--gradient-color1);
+    }
+    &:focus {
+      color: var(--webex-primary-color2);
+    }
+  }
+}
+
+.theme-text-icon-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--text-dark-light);
+  margin-top: 20px;
+  span {
+    text-decoration: underline;
+  }
+  &.icon-right {
+    i {
+      margin-left: 8px;
+    }
+  }
+  &.icon-left {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    i {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+}
+/*Btn Style One*/
+.cs-btn-one {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  background-color: var(--webex-primary-color);
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-webex-primary-color);
+  padding: 14px 46px;
+  font-family: var(--body-font);
+  font-weight: 500;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  i {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  &:hover {
+    background: var(--webex-primary-color2);
+    color: #ffffff;
+    @include transition(all 300ms ease);
+  }
+  &.has-icon {
+    i {
+      font-size: 20px;
+      vertical-align: middle;
+      padding-right: 10px;
+    }
+  }
+  &.btn-sm.has-icon i {
+    font-size: 18px;
+  }
+  &.btn-circle {
+    border-radius: 60px 60px 60px 60px;
+  }
+  &.btn-square {
+    border-radius: 0;
+  }
+  &.btn-sm {
+    font-size: 14px;
+    padding: 10px 28px;
+  }
+  &.btn-md {
+    font-size: 14px;
+    padding: 18px 56px;
+  }
+  &.btn-lg {
+    font-size: 18px;
+    padding: 20px 64px;
+  }
+  &.btn-xl {
+    font-size: 18px;
+    padding: 24px 56px;
+  }
+  &.btn-border {
+    border: 2px solid var(--webex-primary-color);
+    background: transparent;
+    color: var(--webex-primary-color);
+    &:hover {
+      border: 2px solid var(--webex-primary-color2);
+      color: var(--webex-primary-color2);
+    }
+  }
+  &.btn-block {
+    width: 100%;
+  }
+  &.btn-light {
+    background: #fff;
+    color: var(--webex-primary-color);
+    border: 2px solid transparent;
+    &:hover {
+      border: 2px solid;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  &.btn-hover-border:hover {
+    border: 1px solid var(--webex-primary-color);
+  }
+  &.btn-hover-white {
+    &:hover {
+      background: #fff;
+      color: #333;
+    }
+  }
+  &.btn-secordary-color {
+    background: var(--webex-secondary-color);
+    &.hover-white:hover {
+      background: #fff;
+      color: #0c2239;
+    }
+  }
+  &.btn-secordary-color:hover {
+    background: var(--webex-primary-color);
+  }
+  &.btn-webex-primary-color {
+    background: var(--webex-primary-color);
+    &.hover-white:hover {
+      background: #fff;
+      color: #0c2239;
+    }
+  }
+  &.btn-webex-primary-color:hover {
+    background: var(--webex-primary-color2);
+  }
+  &.btn-webex-primary-color2 {
+    background: var(--webex-primary-color2);
+    &.hover-white:hover {
+      background: #fff;
+      color: #0c2239;
+    }
+  }
+  &.btn-webex-primary-color2:hover {
+    background: var(--webex-primary-color);
+  }
+  &.btn-webex-primary-color3 {
+    background: var(--webex-primary-color3);
+    &.hover-white:hover {
+      background: #fff;
+      color: #0c2239;
+    }
+  }
+  &.btn-webex-primary-color3:hover {
+    background: var(--webex-primary-color);
+  }
+  &.btn-webex-primary-color4 {
+    background: var(--webex-primary-color4);
+    color: var(--text-webex-primary-color4);
+    &.btn-hover-white:hover {
+      background: #fff;
+      color: #000;
+    }
+  }
+  &.gradient-btn1 {
+    background: var(--gradient-color1);
+    color: #fff;
+    &:hover {
+      background: var(--gradient-color2);
+    }
+  }
+  &.btn-transparent {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  &.text-btn {
+    color: var(--webex-primary-color);
+  }
+}
+// Button Animated
+.animate-btn-style1 {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #fff !important;
+  text-align: center;
+  padding: 15px 36px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 1;
+  @include transition(all 400ms ease-out 0s);
+  background: var(--webex-primary-color);
+  i {
+    margin-left: 10px;
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    width: 5%;
+    height: 100%;
+    background: rgba(3, 50, 77, 0.2);
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    @include transition(all 400ms ease-out 0s);
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+      background: rgba(3, 50, 77, 1);
+    }
+  }
+  &.btn-sm {
+    font-size: 14px;
+    padding: 10px 28px;
+  }
+  &.btn-md {
+    font-size: 14px;
+    padding: 18px 56px;
+  }
+  &.btn-lg {
+    padding: 22px 56px;
+    font-size: 16px;
+  }
+  &.btn-xl {
+    font-size: 18px;
+    padding: 24px 56px;
+  }
+}
+.animate-btn-style2 {
+  position: relative;
+  display: inline-block;
+  color: var(--webex-secondary-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  z-index: 1;
+  letter-spacing: 1px;
+  border: 1px solid var(--webex-primary-color);
+  @include transition(all 300ms ease-out 0s);
+  font-family: var(--body-font);
+  padding: 10px 32px;
+  font-size: 14px;
+  &:after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    background: rgba(var(--webex-primary-color-rgb), 0.2);
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    @include transition(all 300ms ease-out 0s);
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: rgba(var(--webex-primary-color-rgb), 0.2);
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    @include transition(all 300ms ease-out 0s);
+  }
+  &:hover {
+    color: #fff;
+    &:before,
+    &:after {
+      width: 100%;
+      height: 100%;
+      background: var(--webex-primary-color);
+    }
+  }
+  &.btn-sm {
+    font-size: 12px;
+    padding: 10px 28px;
+  }
+  &.btn-md {
+    font-size: 14px;
+    padding: 18px 56px;
+  }
+  &.btn-lg {
+    padding: 22px 56px;
+    font-size: 16px;
+  }
+  &.btn-xl {
+    font-size: 18px;
+    padding: 24px 56px;
+  }
+}
+.animate-btn-style3 {
+  position: relative;
+  display: inline-block;
+  color: var(--webex-secondary-color);
+  background: #fff;
+  text-align: center;
+  font-weight: 600;
+  z-index: 1;
+  border: 1px solid var(--webex-primary-color);
+  @include transition(all 0.3s linear);
+  font-family: var(--body-font);
+  padding: 16px 46px;
+  font-size: 16px;
+  line-height: initial;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  &:after {
+    content: "";
+    height: 120%;
+    width: 30px;
+    position: absolute;
+    background: var(--gradient-color1);
+    bottom: 0;
+    right: -15px;
+    z-index: -1;
+    transform: skew(25deg);
+    transition-duration: 800ms;
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 100%;
+    background: var(--gradient-color2);
+    left: -25px;
+    top: 0;
+    z-index: -1;
+    transform: skew(25deg);
+    transition-duration: 800ms;
+  }
+  &:hover {
+    color: #fff;
+    &:before,
+    &:after {
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-color1);
+      @include transform(scale(1.4));
+    }
+  }
+  &.btn-sm {
+    font-size: 12px;
+    padding: 10px 28px;
+  }
+  &.btn-md {
+    font-size: 14px;
+    padding: 12px 48px;
+  }
+  &.btn-lg {
+    padding: 18px 56px;
+    font-size: 16px;
+  }
+  &.btn-xl {
+    font-size: 18px;
+    padding: 24px 56px;
+  }
+}
+
+//Portivio Buttons
+.portivio-btn-block {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  position: relative;
+  > *:nth-child(1) {
+    transform: scale3d(1, 1, 1);
+    margin-inline-end: 0;
+    opacity: 1;
+  }
+  > *:nth-child(2) {
+    transform: scale3d(1, 1, 1);
+    border: 1px solid #fff;
+  }
+  > *:nth-child(3) {
+    transform: scale3d(0, 0, 1);
+    margin-inline-start: -40px;
+    opacity: 0;
+  }
+  &:hover {
+    > *:nth-child(1) {
+      transform: scale3d(0, 0, 1);
+      margin-inline-end: -40px;
+      opacity: 0;
+    }
+    > *:nth-child(2) {
+      transform: scale3d(1, 1, 1);
+      border: 1px solid transparent;
+      background-color: var(--webex-primary-color);
+      color: var(--text-webex-primary-color);
+    }
+    > *:nth-child(3) {
+      transform: scale3d(1, 1, 1);
+      margin-inline-start: 0;
+      opacity: 1;
+      background-color: var(--webex-primary-color);
+      color: var(--text-webex-primary-color);
+      border-color: transparent;
+    }
+  }
+  .portivio-btn {
+    display: inline-flex;
+    transition: all 0.3s ease-in-out;
+    &-primary {
+      padding: 17px 28px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: 1px;
+      color: #fff;
+      background-color: transparent;
+      border: 1px solid #fff;
+      border-radius: 30px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 1;
+      gap: 30px;
+      white-space: nowrap;
+      &:hover {
+        color: var(--text-webex-primary-color);
+        background-color: var(--webex-primary-color);
+        border-color: transparent;
+        &:focus {
+          color: var(--text-webex-primary-color);
+        }
+      }
+      &:focus {
+        color: #fff;
+      }
+      &.bordered {
+        border-color: #fff;
+        background-color: transparent;
+        color: #fff;
+
+        &:hover {
+          border-color: #fff;
+          background-color: #fff;
+          color: #fff;
+        }
+      }
+    }
+    &-circle {
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #fff;
+      border-radius: 100%;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: 1px solid #fff;
+      &:hover {
+        background-color: var(--webex-primary-color);
+        color: var(--text-webex-primary-color);
+      }
+    }
+  }
+  &.primary-color3 {
+    &:hover {
+      > *:nth-child(2) {
+        background-color: var(--webex-primary-color3);
+        color: var(--text-webex-primary-color3);
+      }
+      > *:nth-child(3) {
+        background-color: var(--webex-primary-color3);
+        color: var(--text-webex-primary-color3);
+      }
+    }
+    .portivio-btn {
+      &-primary {
+        &:hover {
+          color: var(--text-webex-primary-color3);
+          background-color: var(--webex-primary-color3);
+          border-color: transparent;
+        }
+      }
+    }
+  }
+  &.primary-color4 {
+    &:hover {
+      > *:nth-child(2) {
+        background-color: var(--webex-primary-color4);
+        color: var(--text-webex-primary-color4);
+      }
+      > *:nth-child(3) {
+        background-color: var(--webex-primary-color4);
+        color: var(--text-webex-primary-color4);
+      }
+    }
+    .portivio-btn {
+      &-primary {
+        &:hover {
+          color: var(--text-webex-primary-color4);
+          background-color: var(--webex-primary-color4);
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+//portvio Button 2
+.portivio-btn-block-2 {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  position: relative;
+  > *:nth-child(1) {
+    transform: scale3d(1, 1, 1);
+    margin-inline-end: 0;
+    opacity: 1;
+  }
+  > *:nth-child(2) {
+    transform: scale3d(1, 1, 1);
+    border: 1px solid #fff;
+  }
+  > *:nth-child(3) {
+    transform: scale3d(0, 0, 1);
+    margin-inline-start: -40px;
+    opacity: 0;
+  }
+  &:hover {
+    > *:nth-child(1) {
+      transform: scale3d(0, 0, 1);
+      margin-inline-end: -40px;
+      opacity: 0;
+    }
+    > *:nth-child(2) {
+      transform: scale3d(1, 1, 1);
+      border: 1px solid #fff;
+      background-color: transparent;
+      color: #fff;
+    }
+    > *:nth-child(3) {
+      transform: scale3d(1, 1, 1);
+      margin-inline-start: 0;
+      opacity: 1;
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+  }
+  .portivio-btn-2 {
+    display: inline-flex;
+    transition: all 0.3s ease-in-out;
+    &-primary {
+      padding: 17px 28px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: 1px;
+      color: var(--text-webex-primary-color);
+      background-color: var(--webex-primary-color);
+      border: 1px solid transparent;
+      border-radius: 30px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 1;
+      gap: 30px;
+      white-space: nowrap;
+      &.color3 {
+        color: var(--text-webex-primary-color3);
+        background-color: var(--webex-primary-color3);
+      }
+      &.color4 {
+        color: var(--text-webex-primary-color4);
+        background-color: var(--webex-primary-color4);
+      }
+      &:hover {
+        color: #fff;
+        background-color: transparent;
+        border-color: #fff;
+      }
+      &:focus {
+        color: #fff;
+      }
+      &.bordered {
+        border-color: transparent;
+        background-color: transparent;
+        color: #fff;
+        &:hover {
+          border-color: #fff;
+          background-color: #fff;
+          color: #fff;
+        }
+      }
+    }
+
+    &-circle {
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text-webex-primary-color);
+      border-radius: 100%;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--webex-primary-color);
+      &.color3 {
+        color: var(--text-webex-primary-color3);
+        background-color: var(--webex-primary-color3);
+      }
+      &.color4 {
+        color: var(--text-webex-primary-color4);
+        background-color: var(--webex-primary-color4);
+      }
+      &:hover {
+        background-color: transparent;
+        color: #fff;
+        border-color: #fff;
+      }
+    }
+  }
+}
+//Circle Button
+.xotech_btn_block {
+  .circle_btn_item {
+    position: relative;
+    font-size: 16px;
+    display: flex;
+    height: 170px;
+    width: 170px;
+    font-weight: 500;
+    font-family: var(--heading-font);
+    color: var(--heading-font-color);
+    border: 1px solid #fff;
+    z-index: 3;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    .circle-btn-style1 {
+      color: #fff;
+      i {
+        color: #fff;
+        font-weight: bold;
+        margin-left: 10px;
+        position: relative;
+        top: 3px;
+      }
+    }
+    .circle_btn_dot {
+      position: absolute;
+      bottom: 0;
+      left: 32px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--webex-primary-color);
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      border-radius: 50%;
+      -webkit-transition: all 0.5s ease-out;
+      -moz-transition: all 0.5s ease-out;
+      -ms-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+    &:hover {
+      border: 1px solid transparent;
+      .circle-btn-style1 {
+        color: #000;
+        i {
+          color: #000;
+        }
+      }
+      .circle_btn_dot {
+        width: 420px;
+        height: 420px;
+      }
+    }
+  }
+  &.primary-color3 {
+    .circle_btn_item {
+      .circle-btn-style1 {
+        color: var(--text-webex-primary-color3);
+        i {
+          color: var(--text-webex-primary-color3);
+        }
+      }
+      .circle_btn_dot {
+        background-color: var(--webex-primary-color3);
+      }
+    }
+  }
+  &.primary-color4 {
+    .circle_btn_item {
+      .circle-btn-style1 {
+        color: var(--text-webex-primary-color4);
+        i {
+          color: var(--text-webex-primary-color4);
+        }
+      }
+      .circle_btn_dot {
+        background-color: var(--webex-primary-color4);
+      }
+    }
+  }
+}
+
+//Circle Button2
+.xotech_btn_block2 {
+  .circle_btn_item {
+    position: relative;
+    font-size: 16px;
+    display: inline-flex;
+    height: 170px;
+    width: 170px;
+    font-weight: 500;
+    font-family: var(--heading-font-family);
+    color: var(--heading-font-color);
+    border: 1px solid #fff;
+    z-index: 3;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 16px;
+      right: 18px;
+      background-color: var(--webex-primary-color);
+      width: 100%;
+      height: 100%;
+      line-height: 20px;
+      border-radius: 50%;
+      transition: all 0.3s ease-out;
+      z-index: -1;
+      transform: scale(0.12);
+      transform-origin: bottom right;
+    }
+    .circle-btn-style2 {
+      padding-top: 55px;
+      color: #fff;
+      position: relative;
+      height: 170px;
+      width: 170px;
+      i {
+        color: #fff;
+        font-weight: bold;
+        margin-left: 10px;
+        position: relative;
+        top: 3px;
+      }
+    }
+    &:hover {
+      border: 1px solid transparent;
+      &:after {
+        transform: scale(1);
+        left: 0;
+        bottom: 0;
+      }
+      .circle-btn-style2 {
+        color: #000;
+        i {
+          color: #000;
+        }
+      }
+    }
+  }
+  &.primary-color3 {
+    .circle_btn_item {
+      &:after {
+        background-color: var(--webex-primary-color3);
+      }
+      .circle-btn-style2 {
+        color: var(--text-webex-primary-color3);
+        i {
+          color: var(--text-webex-primary-color3);
+        }
+      }
+    }
+  }
+}

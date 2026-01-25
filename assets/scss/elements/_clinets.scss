@@ -1,0 +1,36 @@
+/*========================================*/
+/*--------------- [_Clients] -------------*/
+/*========================================*/
+.client_style1_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .client_thumb {
+    width: 170px;
+  }
+}
+.clients_01_carousel .swiper-wrapper {
+  transition-timing-function: linear;
+}
+//client_style2_item
+.h3_clients_area {
+  display: flex;
+  align-items: center;
+  .client_style2_item {
+    @media screen and (max-width: 375px) {
+      padding: 30px;
+    }
+    .client_thumb {
+      width: 170px;
+      @media screen and (max-width: 375px) {
+        width: 100%;
+        text-align: center;
+      }
+      img {
+        @media screen and (max-width: 375px) {
+          width: 175px;
+        }
+      }
+    }
+  }
+}

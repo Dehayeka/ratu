@@ -1,0 +1,115 @@
+/*========================================*/
+/*------ [_Section_Single_Service] -------*/
+/*========================================*/
+
+.service-description .title {
+  margin-bottom: 10px;
+}
+.service-nav-menu {
+  .service-link-list {
+    background: var(--bg-black);
+    padding: 40px;
+    border-radius: 10px;
+    @media screen and (max-width: 425px) {
+      padding: 30px;
+    }
+    ul {
+      li {
+        a {
+          display: block;
+          color: var(--heading-font-color);
+          padding: 15px 20px;
+          @include transition(all 300ms ease-out 0s);
+          position: relative;
+          z-index: 1;
+          background: var(--bg-silver);
+          margin-bottom: 10px;
+          font-weight: 500;
+          overflow: hidden;
+          border-radius: 10px;
+          &:before {
+            content: "";
+            width: 10px;
+            top: 0;
+            left: -6px;
+            height: 100%;
+            position: absolute;
+            transition: all 0.4s ease-out;
+            z-index: -1;
+            background: #ffffff1c;
+          }
+          i {
+            font-size: 16px;
+            margin-right: 15px;
+            vertical-align: middle;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-7px);
+          }
+          &:hover {
+            color: var(--text-webex-primary-color);
+            &:before {
+              background-color: var(--webex-primary-color);
+              height: 100%;
+              width: 105%;
+              top: 0;
+            }
+          }
+        }
+        &.active {
+          a {
+            color: var(--text-webex-primary-color);
+            &:before {
+              content: "";
+              background: var(--webex-primary-color);
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+              opacity: 1;
+              z-index: -1;
+            }
+          }
+        }
+        &:last-child {
+          a {
+            border-bottom: none;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.service-section-title-area {
+  background: var(--bg-blue-color);
+  padding: 90px 0 240px;
+  margin: 0 110px;
+  margin-top: -180px;
+}
+.service-section-content {
+  margin-top: -180px;
+}
+.service-features-icon {
+  margin-right: 25px;
+}
+.service-features-icon span {
+  background: var(--webex-primary-color);
+  padding: 15px;
+  display: inline-block;
+  border-radius: 8px;
+}
+.service-features-icon span:before {
+  font-size: 42px;
+  line-height: 42px;
+  color: #fff;
+}
+.blog-standared-img {
+  border-radius: 10px;
+  img {
+    border-radius: 10px;
+  }
+}

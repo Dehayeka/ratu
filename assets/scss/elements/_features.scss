@@ -1,0 +1,50 @@
+/*========================================*/
+/*------------- [_Features] --------------*/
+/*========================================*/
+.features-section {
+  counter-reset: my-sec-counter;
+}
+.feature-block1-wrap {
+  position: relative;
+  left: 75px;
+  @media screen and (max-width: 1399px) {
+    left: 0;
+    top: 60px;
+  }
+  @media screen and (max-width: 425px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .feature-block1-item {
+    background: #0e0e0e;
+    height: 320px;
+    width: 320px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:nth-child(2) {
+      margin-top: -60px;
+      @media screen and (max-width: 425px) {
+        margin-top: 0;
+      }
+    }
+    &:nth-child(3) {
+      position: absolute;
+      top: 50%;
+      right: 75px;
+      transform: translateY(-160px);
+      @media screen and (max-width: 425px) {
+        position: static;
+        transform: translate(0);
+      }
+    }
+    .feature-title {
+      color: #fff;
+    }
+  }
+}
