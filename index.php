@@ -13,6 +13,38 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
   <!-- Preloader Start -->
   <?php include './partials/preloader.php' ?>
   <!-- Preloader End -->
+  <style>
+    @media (max-width: 1199px) {
+      .banner-thumb {
+        position: relative !important;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        height: auto !important;
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+        text-align: center;
+      }
+
+      .banner-thumb img {
+        max-width: 80% !important;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .h1-banner-title {
+        text-align: center;
+      }
+
+      .banner-info {
+        text-align: center;
+      }
+
+      .portivio-btn-block-2 {
+        justify-content: center;
+      }
+    }
+  </style>
   <!-- Header Area Start -->
   <?php include './partials/header.php' ?>
   <!-- Header Area End -->
@@ -24,7 +56,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
         <div class="container">
           <div class="banner-item">
             <div class="row align-items-center">
-              <div class="col-xl-12 anim-heading animation-style1">
+              <div class="col-xl-12 anim-heading animation-style1 order-1">
                 <h1 class="h1-banner-title text-white f-weight-400 mrb-sm-20 wow fadeInLeft">
                   <span class="h1-banner-emoji mrr-20"><img src="images/objects/h1-banner-art1.png" alt="" /></span>I’m
                   <?php echo htmlspecialchars($profile['name']); ?>
@@ -40,7 +72,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
                   <?php echo htmlspecialchars($profile['title']); ?>
                 </h1>
               </div>
-              <div class="col-xl-7">
+              <div class="col-xl-7 order-3 order-md-2">
                 <div class="banner-info">
                   <div class="anim-heading animation-style1">
 
@@ -58,9 +90,9 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
                   </div>
                 </div>
               </div>
-              <div class="col-xl-5">
+              <div class="col-xl-5 order-2 order-md-3">
                 <div class="banner-thumb">
-                  <img class="d-none d-xl-block d-lg-block d-md-block"
+                  <img class="d-block w-100"
                     src="<?php echo htmlspecialchars(!empty($profile['image_url']) ? $profile['image_url'] : 'images/bg/ratu.png'); ?>"
                     alt="Thumb" />
                   <div class="story-box wow fadeInUp">
@@ -97,7 +129,12 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
               </div>
               <div class="h1-about-text-reveal pt-0 webex_text_reveal">
                 <div class="h1-about-text-reveal-title">
-                  Dedicated Advocate at Ratu Office for Advocacy and Consultation, based in Lombok, Indonesia. I am
+                  Dedicated Advocate at Ratu
+
+
+                </div>
+                <div class="h1-about-text-reveal-title">
+                  Office for Advocacy and Consultation, based in Lombok, Indonesia. I am
 
 
                 </div>
@@ -122,19 +159,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
 
               </div>
             </div>
-            <div class="col-sm-12 col-md-11 col-xl-7 col-lg-8 col-xxl-6">
-              <div class="feature-block1-wrap bounce_anim_wrap">
-                <div class="feature-block1-item bounce_anim_item">
-                  <h4 class="feature-title">UI/UX Design</h4>
-                </div>
-                <div class="feature-block1-item bounce_anim_item">
-                  <h4 class="feature-title">Interaction Design</h4>
-                </div>
-                <div class="feature-block1-item bounce_anim_item">
-                  <h4 class="feature-title">Prototyping</h4>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
@@ -169,7 +194,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
               <div class="service_item wow fade_In_Up" data-wow-delay="0.2s">
                 <div class="service_head">
                   <span class="service_count">(01)</span>
-                  <h2 class="service_title">Product Design</h2>
+                  <h2 class="service_title">Example</h2>
                 </div>
                 <div class="service_content">
                   <div class="service_content_left">
@@ -202,7 +227,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
               <div class="service_item wow fade_In_Up" data-wow-delay="0.4s">
                 <div class="service_head">
                   <span class="service_count">(02)</span>
-                  <h2 class="service_title">Web Applications</h2>
+                  <h2 class="service_title">Example</h2>
                 </div>
                 <div class="service_content">
                   <div class="service_content_left">
@@ -235,7 +260,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
               <div class="service_item wow fade_In_Up" data-wow-delay="0.6s">
                 <div class="service_head">
                   <span class="service_count">(03)</span>
-                  <h2 class="service_title">Branding</h2>
+                  <h2 class="service_title">Example</h2>
                 </div>
                 <div class="service_content">
                   <div class="service_content_left">
@@ -268,7 +293,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
               <div class="service_item wow fade_In_Up" data-wow-delay="0.8s">
                 <div class="service_head">
                   <span class="service_count">(04)</span>
-                  <h2 class="service_title">App Design</h2>
+                  <h2 class="service_title">Example</h2>
                 </div>
                 <div class="service_content">
                   <div class="service_content_left">
@@ -301,7 +326,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
               <div class="service_item wow fade_In_Up" data-wow-delay="1s">
                 <div class="service_head">
                   <span class="service_count">(05)</span>
-                  <h2 class="service_title">Framer</h2>
+                  <h2 class="service_title">Example</h2>
                 </div>
                 <div class="service_content">
                   <div class="service_content_left">
@@ -337,7 +362,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
       </section>
       <!-- Service Section End -->
       <!-- Skill Section Start -->
-      <section class="pdb-120">
+      <!-- <section class="pdb-120">
         <div class="section-title">
           <div class="container">
             <div class="row">
@@ -410,7 +435,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Skill Section End -->
       <!-- Expand Image Section Start -->
       <section class="pdb-120 portivio-extend-animation text-center">
@@ -434,7 +459,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
               <div class="col-md-12 col-lg-10 col-xl-6">
                 <div class="title-box-center pined_title_part text-center">
                   <h5 class="sub-title">( Portfolio )</h5>
-                  <h2 class="title">Crafting Seamless UI/UX for Websites & App</h2>
+                  <h2 class="title">Providing Dedicated Legal Advocacy & Representation</h2>
                 </div>
               </div>
               <div class="col"></div>
@@ -443,122 +468,83 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
         </div>
         <div class="section-content">
           <div class="container">
+            <?php
+            // Fetch Projects
+            $sql_projects = "SELECT * FROM projects ORDER BY created_at ASC";
+            $result_projects = $conn->query($sql_projects);
+            $left_col = [];
+            $right_col = [];
+            $i = 0;
+            if ($result_projects->num_rows > 0) {
+              while ($row = $result_projects->fetch_assoc()) {
+                if ($i % 2 == 0) {
+                  $left_col[] = $row;
+                } else {
+                  $right_col[] = $row;
+                }
+                $i++;
+              }
+            }
+            ?>
             <div class="row justify-content-between">
+              <!-- Left Column -->
               <div class="col-md-6 col-lg-5 col-xl-5">
-                <div class="project_style1_item">
-                  <div class="project_thumb scale-img">
-                    <img class="img-full" src="images/projects/project_1.jpg" alt="" />
-                  </div>
-                  <div class="project_content">
-                    <div class="project_title_area">
-                      <div class="project_category">
-                        <ul>
-                          <li><a href="page-projects-style-01.php">Branding</a></li>
-                        </ul>
-                      </div>
-                      <h4 class="title"><a href="page-project-details.php">Design System Creation</a></h4>
+                <?php foreach ($left_col as $index => $project):
+                  $margin_class = ($index == 0) ? '' : 'mrt-100 mrt-md-30';
+                  ?>
+                  <div class="project_style1_item <?php echo $margin_class; ?>">
+                    <div class="project_thumb scale-img">
+                      <img class="img-full" src="<?php echo htmlspecialchars($project['image_url']); ?>" alt="img" />
                     </div>
-                    <a class="project_link" href="page-project-details.php"><i
-                        class="webexbase-icon-up-right-arrow-1"></i></a>
-                  </div>
-                </div>
-                <div class="project_style1_item mrt-200 mrt-md-30">
-                  <div class="project_thumb scale-img">
-                    <img class="img-full" src="images/projects/project_2.jpg" alt="" />
-                  </div>
-                  <div class="project_content">
-                    <div class="project_title_area">
-                      <div class="project_category">
-                        <ul>
-                          <li><a href="page-projects-style-01.php">Marketing Kit</a></li>
-                          <li><a href="page-projects-style-01.php">Growth</a></li>
-                        </ul>
+                    <div class="project_content">
+                      <div class="project_title_area">
+                        <div class="project_category">
+                          <ul>
+                            <li><a href="#"><?php echo htmlspecialchars($project['category']); ?></a></li>
+                          </ul>
+                        </div>
+                        <h4 class="title"><a href="#"><?php echo htmlspecialchars($project['title']); ?></a></h4>
                       </div>
-                      <h4 class="title"><a href="page-project-details.php">Responsive Admin Design</a></h4>
+                      <a class="project_link" href="#"><i class="webexbase-icon-up-right-arrow-1"></i></a>
                     </div>
-                    <a class="project_link" href="page-project-details.php"><i
-                        class="webexbase-icon-up-right-arrow-1"></i></a>
                   </div>
-                </div>
-                <div class="project_style1_item mrt-150 mrt-md-30">
-                  <div class="project_thumb scale-img">
-                    <img class="img-full" src="images/projects/project_3.jpg" alt="" />
-                  </div>
-                  <div class="project_content">
-                    <div class="project_title_area">
-                      <div class="project_category">
-                        <ul>
-                          <li><a href="page-projects-style-01.php">Redesign Website</a></li>
-                        </ul>
-                      </div>
-                      <h4 class="title"><a href="page-project-details.php">UI/UX Redesign</a></h4>
-                    </div>
-                    <a class="project_link" href="page-project-details.php"><i
-                        class="webexbase-icon-up-right-arrow-1"></i></a>
-                  </div>
-                </div>
+                <?php endforeach; ?>
               </div>
+
+              <!-- Right Column -->
               <div class="col-md-6 col-lg-5 col-xl-5">
-                <div class="project_style1_item mrt-150 mrt-md-30">
-                  <div class="project_thumb square-size scale-img">
-                    <img class="img-full" src="images/projects/project_4.jpg" alt="" />
-                  </div>
-                  <div class="project_content">
-                    <div class="project_title_area">
-                      <div class="project_category">
-                        <ul>
-                          <li><a href="page-projects-style-01.php">Typography</a></li>
-                        </ul>
-                      </div>
-                      <h4 class="title"><a href="page-project-details.php">Modern Dashboard UI</a></h4>
+                <?php foreach ($right_col as $index => $project):
+                  $margin_class = 'mrt-150 mrt-md-30'; // Default offset for right column items
+                  if ($index > 0)
+                    $margin_class = 'mrt-100 mrt-md-30';
+                  ?>
+                  <div class="project_style1_item <?php echo $margin_class; ?>">
+                    <div class="project_thumb square-size scale-img">
+                      <img class="img-full" src="<?php echo htmlspecialchars($project['image_url']); ?>" alt="img" />
                     </div>
-                    <a class="project_link" href="page-project-details.php"><i
-                        class="webexbase-icon-up-right-arrow-1"></i></a>
-                  </div>
-                </div>
-                <div class="project_style1_item mrt-150 mrt-md-30">
-                  <div class="project_thumb scale-img">
-                    <img class="img-full" src="images/projects/project_5.jpg" alt="" />
-                  </div>
-                  <div class="project_content">
-                    <div class="project_title_area">
-                      <div class="project_category">
-                        <ul>
-                          <li><a href="page-projects-style-01.php">Branding</a></li>
-                        </ul>
+                    <div class="project_content">
+                      <div class="project_title_area">
+                        <div class="project_category">
+                          <ul>
+                            <li><a href="#"><?php echo htmlspecialchars($project['category']); ?></a></li>
+                          </ul>
+                        </div>
+                        <h4 class="title"><a href="#"><?php echo htmlspecialchars($project['title']); ?></a></h4>
                       </div>
-                      <h4 class="title"><a href="page-project-details.php">Digital Masterpieces</a></h4>
+                      <a class="project_link" href="#"><i class="webexbase-icon-up-right-arrow-1"></i></a>
                     </div>
-                    <a class="project_link" href="page-project-details.php"><i
-                        class="webexbase-icon-up-right-arrow-1"></i></a>
                   </div>
-                </div>
-                <div class="project_style1_item mrt-500 mrt-md-30">
-                  <div class="project_thumb thumb-size scale-img">
-                    <img class="img-full" src="images/projects/project_6.jpg" alt="" />
-                  </div>
-                  <div class="project_content">
-                    <div class="project_title_area">
-                      <div class="project_category">
-                        <ul>
-                          <li><a href="page-projects-style-01.php">Hierarchy</a></li>
-                        </ul>
-                      </div>
-                      <h4 class="title"><a href="page-project-details.php">E-commerce Excellence</a></h4>
-                    </div>
-                    <a class="project_link" href="page-project-details.php"><i
-                        class="webexbase-icon-up-right-arrow-1"></i></a>
-                  </div>
-                </div>
+                <?php endforeach; ?>
               </div>
             </div>
+
             <div class="row mrt-60">
               <div class="col d-flex align-items-center justify-content-center">
                 <div class="portivio-btn-block">
-                  <a class="portivio-btn portivio-btn-circle" href="page-projects-style-01.php"><i
+                  <a class="portivio-btn portivio-btn-circle" href="#"><i
                       class="webexbase-icon-up-right-arrow-1"></i></a>
-                  <a class="portivio-btn portivio-btn-primary" href="page-projects-style-01.php">ALL PROJECTS</a>
-                  <a class="portivio-btn portivio-btn-circle" href="page-projects-style-01.php"><i
+                  <a class="portivio-btn portivio-btn-primary" href="#">VIEW ALL CASES</a>
+                  <a class="portivio-btn portivio-btn-circle" href="#"><i
                       class="webexbase-icon-up-right-arrow-1"></i></a>
                 </div>
               </div>
@@ -608,7 +594,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
               <div class="col-md-12 col-lg-10 col-xl-6">
                 <div class="title-box-center text-center anim-heading animation-style1">
                   <h5 class="sub-title">( Awards & ACHIVMENT )</h5>
-                  <h2 class="title anim-title">Our Achievement & Awards</h2>
+                  <h2 class="title anim-title">My Achievement & Awards</h2>
                 </div>
               </div>
               <div class="col"></div>
@@ -619,70 +605,43 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
           <div class="container">
             <div class="row">
               <div class="col-lg-12">
-                <div class="award_style1 wow fadeInUp" data-wow-delay="0.2s">
-                  <div class="award_item portivio-hover-reveal-item">
-                    <div class="award_content">
-                      <div class="award_name">Awwwards Site</div>
-                      <div class="award_title_area">
-                        <div class="award_category">Award</div>
-                        <h4 class="award_title">Behance Winner</h4>
-                      </div>
-                      <div class="award_year">2004</div>
-                      <div class="award_logo">
-                        <img src="images/award/1.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="portivio-hover-reveal-bg" data-background="images/award/1.jpg"></div>
-                  </div>
-                </div>
-                <div class="award_style1 wow fadeInUp" data-wow-delay="0.4s">
-                  <div class="award_item portivio-hover-reveal-item">
-                    <div class="award_content">
-                      <div class="award_name">Behance Site</div>
-                      <div class="award_title_area">
-                        <div class="award_category">Site of the day</div>
-                        <h4 class="award_title">Behance Winner</h4>
-                      </div>
-                      <div class="award_year">2004</div>
-                      <div class="award_logo">
-                        <img src="images/award/2.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="portivio-hover-reveal-bg" data-background="images/award/2.jpg"></div>
-                  </div>
-                </div>
-                <div class="award_style1 wow fadeInUp" data-wow-delay="0.6s">
-                  <div class="award_item portivio-hover-reveal-item">
-                    <div class="award_content">
-                      <div class="award_name">Dribbble Site</div>
-                      <div class="award_title_area">
-                        <div class="award_category">Site of the Month</div>
-                        <h4 class="award_title">Design Awards</h4>
-                      </div>
-                      <div class="award_year">2025</div>
-                      <div class="award_logo">
-                        <img src="images/award/3.png" alt="" />
+                <?php
+                $sql_awards = "SELECT * FROM awards ORDER BY year DESC";
+                $result_awards = $conn->query($sql_awards);
+                $delay = 0.2;
+                if ($result_awards->num_rows > 0) {
+                  while ($award = $result_awards->fetch_assoc()) {
+                    ?>
+                    <div class="award_style1 wow fadeInUp" data-wow-delay="<?php echo $delay; ?>s">
+                      <div class="award_item portivio-hover-reveal-item">
+                        <div class="award_content">
+                          <div class="award_name">
+                            <?php echo htmlspecialchars($award['organization']); ?>
+                          </div>
+                          <div class="award_title_area">
+                            <div class="award_category">
+                              <?php echo htmlspecialchars($award['category']); ?>
+                            </div>
+                            <h4 class="award_title">
+                              <?php echo htmlspecialchars($award['title']); ?>
+                            </h4>
+                          </div>
+                          <div class="award_year">
+                            <?php echo htmlspecialchars($award['year']); ?>
+                          </div>
+                          <div class="award_logo">
+                            <img src="<?php echo htmlspecialchars($award['image_url']); ?>" alt="" />
+                          </div>
+                        </div>
+                        <div class="portivio-hover-reveal-bg"
+                          data-background="<?php echo htmlspecialchars($award['image_url']); ?>"></div>
                       </div>
                     </div>
-                    <div class="portivio-hover-reveal-bg" data-background="images/award/3.jpg"></div>
-                  </div>
-                </div>
-                <div class="award_style1 wow fadeInUp" data-wow-delay="0.8s">
-                  <div class="award_item portivio-hover-reveal-item">
-                    <div class="award_content">
-                      <div class="award_name">Themeforest Site</div>
-                      <div class="award_title_area">
-                        <div class="award_category">Designer</div>
-                        <h4 class="award_title">Web Development</h4>
-                      </div>
-                      <div class="award_year">2008</div>
-                      <div class="award_logo">
-                        <img src="images/award/4.png" alt="" />
-                      </div>
-                    </div>
-                    <div class="portivio-hover-reveal-bg" data-background="images/award/4.jpg"></div>
-                  </div>
-                </div>
+                    <?php
+                    $delay += 0.2;
+                  }
+                }
+                ?>
               </div>
             </div>
           </div>
@@ -733,60 +692,40 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
               <div class="col-xl-9 pos-rel">
                 <div class="testimonial_01_carousel swiper">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="testimonial_01_item">
-                        <div class="testimonial_thumbnail">
-                          <img class="img-full" src="images/testimonials/thumb1.jpg" alt="" />
-                        </div>
-                        <div class="testimonial_content">
-                          <p class="comments">
-                            "The team provided exceptional financial guidance tailored to my needs.Their expert advice
-                            helped grow my investments while ensuring financial security for the future. I highly
-                            recommend their services for anyone seeking trusted, financial solutions!!"
-                          </p>
-                          <div class="testimonial-bottom-part">
-                            <h4 class="testimonial-title">Arlene McCoy</h4>
-                            <span class="testimonial-subtitle">Co. Founder</span>
+                    <?php
+                    // Using the connection from config.php included at the top
+                    $sql = "SELECT r.*, c.name, c.company, c.image_url FROM reviews r JOIN clients c ON r.client_id = c.id ORDER BY r.created_at DESC";
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                      while ($row = $result->fetch_assoc()) {
+                        ?>
+                        <div class="swiper-slide">
+                          <div class="testimonial_01_item">
+                            <div class="testimonial_thumbnail">
+                              <img class="img-full" style="width: 337px; height: 440px; object-fit: cover;"
+                                src="<?php echo htmlspecialchars($row['image_url']); ?>" alt="" />
+                            </div>
+                            <div class="testimonial_content">
+                              <p class="comments">
+                                "<?php echo htmlspecialchars($row['comment']); ?>"
+                              </p>
+                              <div class="testimonial-bottom-part">
+                                <h4 class="testimonial-title"><?php echo htmlspecialchars($row['name']); ?></h4>
+                                <span class="testimonial-subtitle"><?php echo htmlspecialchars($row['company']); ?></span>
+                                <div class="ratings mt-2">
+                                  <?php for ($i = 0; $i < $row['rating']; $i++): ?>
+                                    <i class="fas fa-star text-warning"></i>
+                                  <?php endfor; ?>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="testimonial_01_item">
-                        <div class="testimonial_thumbnail">
-                          <img class="img-full" src="images/testimonials/thumb2.jpg" alt="" />
-                        </div>
-                        <div class="testimonial_content">
-                          <p class="comments">
-                            "The team provided exceptional financial guidance tailored to my needs.Their expert advice
-                            helped grow my investments while ensuring financial security for the future. I highly
-                            recommend their services for anyone seeking trusted, financial solutions!!"
-                          </p>
-                          <div class="testimonial-bottom-part">
-                            <h4 class="testimonial-title">Maya White</h4>
-                            <span class="testimonial-subtitle">Founder</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="testimonial_01_item">
-                        <div class="testimonial_thumbnail">
-                          <img class="img-full" src="images/testimonials/thumb3.jpg" alt="" />
-                        </div>
-                        <div class="testimonial_content">
-                          <p class="comments">
-                            "The team provided exceptional financial guidance tailored to my needs.Their expert advice
-                            helped grow my investments while ensuring financial security for the future. I highly
-                            recommend their services for anyone seeking trusted, financial solutions!!"
-                          </p>
-                          <div class="testimonial-bottom-part">
-                            <h4 class="testimonial-title">Samuel Connolly</h4>
-                            <span class="testimonial-subtitle">Admin</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                        <?php
+                      }
+                    }
+                    ?>
                   </div>
                 </div>
 
@@ -797,6 +736,7 @@ $title = 'Ratu Lawyer Mataram - Portfolio';
                   <div class="testimonial_01_button_next"></div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

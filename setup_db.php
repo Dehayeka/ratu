@@ -57,5 +57,58 @@ if ($conn->query($sql) === TRUE) {
     echo "Error creating table: " . $conn->error . "\n";
 }
 
+
+// Connection kept open for further queries
+
+
+// Create clients table
+$sql = "CREATE TABLE IF NOT EXISTS clients (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    company VARCHAR(100),
+    image_url VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Table clients created successfully\n";
+    // Insert dummy clients
+    $password = password_hash('password123', PASSWORD_DEFAULT);
+    $conn->query("INSERT IGNORE INTO clients (id, name, email, password, company, image_url) VALUES 
+        (1, 'Arlene McCoy', 'arlene@example.com', '$password', 'Co. Founder', 'images/testimonials/thumb1.jpg'),
+        (2, 'Maya White', 'maya@example.com', '$password', 'Founder', 'images/testimonials/thumb2.jpg'),
+        (3, 'Samuel Connolly', 'samuel@example.com', '$password', 'Admin', 'images/testimonials/thumb3.jpg'),
+        (4, 'Michael Smith', 'michael@example.com', '$password', 'CEO', 'images/testimonials/man.png')
+    ");
+} else {
+    echo "Error creating table clients: " . $conn->error . "\n";
+}
+
+// Create reviews table
+$sql = "CREATE TABLE IF NOT EXISTS reviews (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    client_id INT(6) UNSIGNED,
+    project_name VARCHAR(255),
+    rating INT(1) NOT NULL,
+    comment TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (client_id) REFERENCES clients(id) ON DELETE CASCADE
+)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Table reviews created successfully\n";
+    // Insert dummy reviews
+    $conn->query("INSERT IGNORE INTO reviews (id, client_id, project_name, rating, comment) VALUES 
+        (1, 1, 'Finance App', 5, 'The team provided exceptional financial guidance tailored to my needs. Their expert advice helped grow my investments while ensuring financial security for the future. I highly recommend their services!'),
+        (2, 2, 'E-commerce Site', 5, 'Professional, efficient, and great to work with. They delivered the project on time and exceeded our expectations.'),
+        (3, 3, 'Corporate Portal', 4, 'Great work on the portal. The design is intuitive and the functionality is exactly what we needed. A few minor tweaks were handled quickly.'),
+        (4, 4, 'Mobile App', 5, 'Outstanding service! The mobile app is user-friendly and looks amazing. Will definitely work with them again.')
+    ");
+} else {
+    echo "Error creating table reviews: " . $conn->error . "\n";
+}
+
 $conn->close();
 ?>

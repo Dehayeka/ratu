@@ -62,10 +62,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Ratu Lawyer Admin</a>
-            <a href="logout.php" class="btn btn-outline-light">Logout</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" href="dashboard.php">Profile</a>
+                <a class="nav-link" href="projects.php">Projects</a>
+                <a class="nav-link" href="awards.php">Awards</a>
+                <a class="nav-link" href="partners.php">Partners</a>
+                <a class="nav-link btn btn-outline-light ms-2" href="logout.php">Logout</a>
+            </div>
         </div>
     </nav>
 

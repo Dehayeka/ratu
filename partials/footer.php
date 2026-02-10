@@ -9,7 +9,7 @@
                     <div class="xotech_btn_block circle_hover_btn">
                         <div class="circle_btn_item">
                             <a href="page-contact.php" class="circle-btn-style1">Hire Me <i
-                                    class="circle-btn-arrow webexbase-icon-black-arrow-1"></i> <br />For Freelance </a>
+                                    class="circle-btn-arrow webexbase-icon-black-arrow-1"></i> <br />For Project </a>
                             <span class="circle_btn_dot"></span>
                         </div>
                     </div>

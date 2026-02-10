@@ -68,7 +68,7 @@
 /*========================================*/
 /*----------- [_Google_Fonts] ------------*/
 /*========================================*/
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Kumbh+Sans:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Kumbh+Sans:wght@100..900&family=Playfair+Display:wght@400;500;600;700;800&display=swap");
 /*========================================*/
 /*-------- [_Imported_CSS_Plugins] -------*/
 /*========================================*/
@@ -126,12 +126,11 @@
   --bg-silver-light2: #f0f1f7;
   --bg-silver-deep: #ecdaee;
   --bg-gray: #f7f7f7;
-  --gradient-color1: linear-gradient(45deg, var(--webex-primary-color) 0%, var(--webex-primary-color2) 100%);
-  --gradient-color2: linear-gradient(45deg, var(--webex-primary-color2) 0%, var(--webex-primary-color) 100%);
-  --gradient-color3: linear-gradient(45deg, var(--webex-primary-color5) 0%, var(--webex-primary-color6) 100%);
-  --gradient-color4: linear-gradient(45deg, var(--webex-primary-color6) 0%, var(--webex-primary-color5) 100%);
-  --gradient-section-overlay: linear-gradient(90deg, var(--webex-primary-color2) 10%, var(--webex-primary-color) 100%);
-  --heading-font: "Jost", sans-serif;
+  /* Luxury Gold Gradients for Law Firm (Darker Gold to Lighter Gold) */
+  --gradient-color1: linear-gradient(45deg, #D4AF37 0%, #F2D06B 100%);
+  --gradient-color2: linear-gradient(45deg, #000000 0%, #D4AF37 100%);
+  --gradient-section-overlay: linear-gradient(90deg, #000000 10%, #D4AF37 100%);
+  --heading-font: "Playfair Display", serif;
   --body-font: "Kumbh Sans", sans-serif;
   --secondary-font1: "Allison", cursive;
   --heading-font-color: #000;
@@ -435,6 +434,8 @@ img {
   margin-bottom: 35px;
   text-align: center;
   border-radius: 8px;
+  border: 1px solid var(--webex-primary-color);
+  /* Added Gold Border */
 }
 
 .block-quote:after {
@@ -12458,3 +12459,106 @@ select {
 }
 
 /*# sourceMappingURL=style.css.map */
+/* ========================================= */
+/*      MODERN LUXURY LAW FIRM STYLES        */
+/* ========================================= */
+
+/* --- Typography --- */
+body,
+p,
+span,
+a,
+li {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title,
+.sub-title {
+  font-family: 'Playfair Display', serif !important;
+}
+
+/* --- Project Cards (Winning Cases) --- */
+.project_style1_item {
+  background: #000;
+  border: 1px solid #333;
+  padding: 15px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project_style1_item:hover {
+  border-color: var(--webex-primary-color);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+  transform: translateY(-5px);
+}
+
+.project_style1_item .project_thumb {
+  border-bottom: 2px solid var(--webex-primary-color);
+}
+
+/* --- Service Cards --- */
+.service_item {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  transition: all 0.4s ease;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 1) 0%, rgba(10, 10, 10, 1) 100%);
+}
+
+.service_item:hover {
+  border-color: var(--webex-primary-color);
+  background: linear-gradient(180deg, rgba(30, 30, 30, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.service_title {
+  color: #fff !important;
+}
+
+/* --- Buttons (Gold Gradient) --- */
+.portivio-btn-primary,
+.portivio-btn-2-primary {
+  background: linear-gradient(90deg, #D4AF37 0%, #F2D06B 100%) !important;
+  color: #000 !important;
+  font-weight: 700;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.portivio-btn-primary:hover,
+.portivio-btn-2-primary:hover {
+  background: linear-gradient(90deg, #F2D06B 0%, #D4AF37 100%) !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.portivio-btn-circle {
+  border-color: var(--webex-primary-color) !important;
+  color: var(--webex-primary-color) !important;
+}
+
+.portivio-btn-circle:hover {
+  background: var(--webex-primary-color) !important;
+  color: #000 !important;
+}
+
+/* --- Section Titles --- */
+.sub-title {
+  color: var(--webex-primary-color) !important;
+  font-style: italic;
+  font-size: 18px !important;
+  letter-spacing: 2px;
+}
+
+/* --- Navbar --- */
+.main-menu-logo h3 {
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(45deg, #fff, #D4AF37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
